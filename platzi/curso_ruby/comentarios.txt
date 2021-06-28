@@ -1,0 +1,128 @@
+paa entrar al interprete de rubi en consola
+
+irb
+
+limpiar pantalla
+
+en windows:system(“cls”)
+en linux: system(“clear”)
+
+#################variables######################
+
+-asignar un valor a una variable
+
+x = 5
+
+-metodos para obtener informacion de las variables
+
+-obtener que clase es:
+
+x.class
+
+-obtener todos los metodos disponibles para esa variable
+
+x.methods
+
+-obtener si la variable es impar
+
+x.odd?
+
+o par
+
+x.even?
+
+operaciones:
+
+x + 5 suma
+x - 6 resta
+x / 7 divicion
+x * 4 multiplicacion
+x % 3 residuo d ela divicion
+4 ** 2 potencia
+
+Variables
+
+Deben empezar con un letra minúscula o un guión bajo (_), se recomienda el uso de la convención “snake_case” con el fin de identificarlas fácilmente y no puede contener palabras reservadas del lenguaje.
+Cuando Ruby encuentra una palabra decide qué es de la siguiente forma:
+Primero, si hay un signo de igualdad (=) a la derecha de la palabra, es una variable local a la que se le asigna un valor.
+Identifica si es una palabra reservada del lenguaje y de ser así cumplirá su función.
+Si no se cumple ninguno de los anteriores casos, Ruby asume que es un método.
+Cuando se hace referencia a una variable local sin inicializar, se interpreta como una llamada a un método que no tiene argumentos.
+
+-strings
+
+saludo = "Hola"
+
+saludo = %q(hola)
+
+saludo = %Q(HOLA)
+
+-concatenar
+
+saludo = "Hola #{nombre}"
+
+saludo = nombre + " santiago"
+
+lgunos métodos para un string:
+
+“hola”.upcase (Devuelve una copia de la cadena en mayúsculas)
+“hola”.downcase ( Devuelve una copia de la cadena en minusculas)
+“hola”.length (Devuelve la cantidad de caracteres de la cadena)
+“HoLa”.swapcase (Devuelve una copia de la cadena con caracteres alfabéticos en mayúsculas convertidos a minúsculas y viceversa)
+“hola”.include? “h” (Devuelve true si el carácter asignado entre está incluido en nuestra cadena o variable)
+" hola".strip (Devuelve una copia de la cadena con caracteres alfabéticos en mayúsculas convertidos a minúsculas y minúsculas convertidos a mayúsculas)
+“”.empty (Devuelve true si la cadena está vacia)
+“Hola ruby”.gsup(“ruby”, “mundo”) ( Devuelve una copia de la cadena con todas las apariciones de patrón sustituidas por el segundo argumento )
+gsub! (Para modificar la variable en ves de devolver una copia)
+"Simon soriano".gsub("Simon", "Santiago")
+
+-symbols
+
+para saber el id de dos variables iguals
+
+nombre = "simon"
+nombre_dos = "simon"
+
+nombre.object_id
+
+
+-Símbolos
+
+Un símbolo es el objeto más básico que puedes crear en Ruby: es un nombre y una ID interna. Los símbolos son útiles por que dado un símbolo, se refiere al mismo objeto en todo el programa. Por lo tanto, son más eficientes que los strings: dos strings con el mismo nombre, son dos objetos distintos. Esto implica ahorrar de tiempo y memoria.
+
+color = :rojo
+
+color_dos = :rojo
+
+ambas variables entregara en el mismo id
+
+#######################Arrays###################3
+
+Un array o arreglo e sun tipo de tao especial donde vaz a poder almacenar multiples objetos en una sola variable
+
+almacenar multiples variables en una sola variable
+           0   1   2   3   4   5
+letras = ["q","w","e","r","t","y"]
+
+obtener un indice
+
+letras[2]
+
+letras[-1]
+
+Métodos:
+
+letras.include? “y” (Devuelve true si incluye dicho elemento)
+letras.count { |x| x == “y” } (Nos retorna la cantidad de elementos que cumplen dicha condición)
+[1,2,3,4,5].map { |x| x*2 } (Nos retorna un arreglo modificado según la condición)
+[1,2,3,4,5].select { |x| x.even? } (Nos retorna un arreglo con los elementos seleccionados según la condición)
+[1,2,3,4,5].min (Nos va a retornar el elemento más pequeño)
+[1,2,3,4,5].max (Nos va a retornar el elemento más grande)
+[1,2,3,4,5].sum (Retorna la suma de todos los elementos del arreglo)
+“Hola Mundo”.split(" ") (Nos retorna un arreglo con la cadena dentro separada por el elemento dentro del paréntesis)
+[“a”, “b” ,“c”].join("-") (Retorna los elementos de una matriz en una cadena separada por el elemento dentro del paréntesis)
+letras.sort (Nos retorna una copia ordenada del arreglo)
+
+Algo interesante de Ruby es que podemos utilizar números negativos para acceder a las posiciones desde el último elemento del array.
+
+Los arreglos en Ruby no tienen un tipo específico, esto quiere decir que dentro de un array podemos tener diferentes tipos de datos en cada elemento.

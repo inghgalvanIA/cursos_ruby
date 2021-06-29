@@ -114,6 +114,7 @@ Métodos:
 
 letras.include? “y” (Devuelve true si incluye dicho elemento)
 letras.count { |x| x == “y” } (Nos retorna la cantidad de elementos que cumplen dicha condición)
+letras.first retornara el primer elemento del arreglo
 [1,2,3,4,5].map { |x| x*2 } (Nos retorna un arreglo modificado según la condición)
 [1,2,3,4,5].select { |x| x.even? } (Nos retorna un arreglo con los elementos seleccionados según la condición)
 [1,2,3,4,5].min (Nos va a retornar el elemento más pequeño)

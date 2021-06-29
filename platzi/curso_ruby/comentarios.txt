@@ -128,4 +128,71 @@ Algo interesante de Ruby es que podemos utilizar números negativos para acceder
 
 Los arreglos en Ruby no tienen un tipo específico, esto quiere decir que dentro de un array podemos tener diferentes tipos de datos en cada elemento.
 
-##############
+####################Hashes#######################################
+
+Hashes, también conocidos como arrays asociativos, mapas o diccionarios, son parecidos a los arrays en que son una colección indexada de referencias a objetos. Sin embargo, mientras que en los arrays los índices son números, en los hashes se puede indexar con objetos de cualquier tipo.
+
+Cuando se almacena un valor en un array, se dan dos objetos: el índice y el valor. Luego, se puede obtener dicho valor, gracias al índice.
+
+se declara:
+
+capitales = {llave => valor}
+
+tipo de datos 
+
+capitales.class
+
+para reasignar un valor
+
+capitales = {"Colombia" => "Bogota"}
+
+para agregar un valor
+
+capitales ["Mexico"] = "Ciudad de Mexico"
+
+capitales = {
+    "Mexico" => "Ciudad de México",
+    "Colombia" => "Bogota",
+    "Peru" => "Lima",
+    "Chile" => "Santiago de chile",
+    "España" => "Madrid",
+    "Argentina" => "Buenos Aires",
+    "Paises bajos" => "Amsterdam",
+    "Estados unidos" => "Washington"
+
+}
+
+para conocer el valor de una variable por medio de la llave
+
+capitales["Peru"]
+"Lima"
+
+conocer el tammaño del hashes
+
+capitales.size
+
+conocer si un hashe esta vacio
+
+capitales.empty?
+
+conocer si un valor aparece
+
+capitales.has_value? "Washington"
+
+cambiar valores de llaves y valores
+
+capitales.invert
+
+combinar 2 hashes
+
+capitales.nerge({"Marte" => "Musk"})
+
+convertir depenediendo de la condicion, ejemplo pasarlos a minusculas
+
+capitales.transform_values {|x| x.downcase}
+
+puts capitales.map { |k,v| "La capital de #{k} es #{v}"}
+
+crear un hash por medio de 2 arreglos
+
+[["pepito",13],["susana",14]].to_h

@@ -127,3 +127,5 @@ letras.sort (Nos retorna una copia ordenada del arreglo)
 Algo interesante de Ruby es que podemos utilizar números negativos para acceder a las posiciones desde el último elemento del array.
 
 Los arreglos en Ruby no tienen un tipo específico, esto quiere decir que dentro de un array podemos tener diferentes tipos de datos en cada elemento.
+
+##############
